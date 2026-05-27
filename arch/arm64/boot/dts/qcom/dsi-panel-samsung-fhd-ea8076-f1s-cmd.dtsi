@@ -23,6 +23,11 @@
 		qcom,mdss-dsi-panel-model = "SAMSUNG FHD EA8076 CMD PANEL";
 		qcom,mdss-dsi-panel-sleepwrmod = <0>;
 		qcom,mdss-dsi-panel-type = "dsi_cmd_mode";
+
+        qcom,dsi-ctrl-num = <0>;
+		qcom,dsi-phy-num = <0>;
+		qcom,dsi-select-clocks = "mux_byte_clk0", "mux_pixel_clk0";
+
 		qcom,mdss-dsi-virtual-channel-id = <0>;
 		qcom,mdss-dsi-stream = <0>;
 		qcom,mdss-dsi-bpp = <24>;
@@ -67,7 +72,7 @@
 		qcom,esd-err-irq-gpio = <&tlmm 5 0x2002>;
 
 		qcom,disp-doze-backlight-threshold = <8>;
-
+        qcom,disp-fod-off-dimming-delay = <85>;
 		qcom,elvss_dimming_check_enable;
 		qcom,mdss-dsi-panel-elvss-dimming-read-length = <1>;
 		qcom,mdss-dsi-dispparam-elvss-dimming-offset-command = [39 01 00 00 00 00 02 B0 07];
@@ -649,7 +654,7 @@
 				qcom,mdss-dsi-v-top-border = <0>;
 				qcom,mdss-dsi-v-bottom-border = <0>;
 				qcom,mdss-dsi-panel-framerate = <90>;
-				qcom,mdss-dsi-panel-clockrate = <1540000000>;
+				qcom,mdss-dsi-panel-clockrate = <1500200000>;
 				qcom,mdss-dsi-panel-jitter = <0x5 0x1>;
 				qcom,mdss-dsi-on-command = [
 					39 00 00 00 00 00 03 F0 5A 5A
@@ -673,7 +678,7 @@
 
 					/* OSC frequency to 91.8M/89.8M */
 					39 00 00 00 00 00 02 B0 23
-					39 00 00 00 00 00 02 D1 2C
+					39 00 00 00 00 00 02 D1 0F
 					/*39 00 00 00 00 00 0C E9 11 55 A6 75 A3 A6 37 BE 00 1A B8*/
 					39 00 00 00 00 00 0C E9 11 55 A6 75 A3 A9 EB 71 00 1A B8
 					39 00 00 00 00 00 0C D9 14 00 00 8F 6E 00 00 8F 2E 6E 34
