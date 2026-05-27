@@ -246,7 +246,7 @@ And public attribution of xiaomi platforms(like F1X and so and)
 
 &vendor {
 	mtp_batterydata: qcom,battery-data {
-		qcom,batt-id-range-pct = <15>;
+		qcom,batt-id-range-pct = <5>;
 		#include "batterydata-F1-atl-3300mah.dtsi"
 		#include "batterydata-F1-coslight-3300mah.dtsi"
 		#include "fg-gen4-batterydata-alium-3600mah.dtsi"
@@ -267,10 +267,10 @@ And public attribution of xiaomi platforms(like F1X and so and)
 &pm8150b_charger {
 	qcom,cp-mode = <2>;
 	qcom,sec-charger-config = <1>;
-	qcom,usb-icl-ua = <4000000>;
-	qcom,fcc-max-ua = <8000000>;
+	qcom,usb-icl-ua = <6000000>;
+	qcom,fcc-max-ua = <10000000>;
 	qcom,fv-max-uv = <4480000>;
-	qcom,dc-icl-ua = <500000>;
+	qcom,dc-icl-ua = <3500000>;
 	qcom,auto-recharge-vbat-mv = <4380>;
 	qcom,step-charging-enable;
 	qcom,sw-jeita-enable;
@@ -293,13 +293,13 @@ And public attribution of xiaomi platforms(like F1X and so and)
 				   1300000 1300000 1200000 1000000 900000 850000 750000
 				   650000 500000>;
 	qcom,thermal-fcc-qc3-normal
-				= <3200000 3000000 2800000 2600000 2500000 2400000 2300000
-				   2200000 2100000 1800000 1600000 1400000 1200000 1000000
-				   750000 750000>;
+				= <4800000 4700000 4600000 4500000 4400000 4200000 4200000
+				   4200000 4000000 3600000 3400000 3200000 3000000 2200000
+				   1000000 700000>;
 	qcom,thermal-fcc-qc3-cp
-				= <3600000 3600000 3600000 3600000 3200000 3200000 3200000
-				   3200000 3100000 2800000 2400000 2200000 2000000 1300000
-				   750000 700000>;
+				= <4800000 4700000 4600000 4500000 4400000 4200000 4200000
+				   4200000 4000000 3600000 3400000 3200000 3000000 2200000
+				   1000000 700000>;
 	qcom,thermal-fcc-qc3-classb-cp
 				= <4800000 4700000 4600000 4500000 4400000 4200000 4200000
 				   4200000 4000000 3600000 3400000 3200000 3000000 2200000
@@ -321,9 +321,9 @@ And public attribution of xiaomi platforms(like F1X and so and)
 				   1000000 900000  700000  700000  600000  500000  400000
 				   300000  200000>;
 	qcom,thermal-mitigation-bpp-qc3
-				= <1400000 1300000 1200000 1200000 1100000 1000000 900000
-				   800000  700000  700000  700000  600000  500000  400000
-				   300000  200000>;
+				= <4800000 4700000 4600000 4500000 4400000 4200000 4200000
+				   4200000 4000000 3600000 3400000 3200000 3000000 2200000
+				   1000000 700000>;
 	qcom,thermal-mitigation-bpp-qc2
 				= <1100000 1100000 1100000 1100000 1100000 1000000 1000000
 				   1000000 700000  700000  700000  600000  500000  400000
@@ -397,7 +397,7 @@ And public attribution of xiaomi platforms(like F1X and so and)
 &pm8150b_pdphy {
 	vbus-supply = <&ext_5v_boost>;
 	mi,pd_curr_limit = <1>;
-	mi,pd_max_curr_limit = <4000000>;
+	mi,pd_max_curr_limit = <8000000>;
 };
 
 &usb0 {
@@ -719,8 +719,8 @@ And public attribution of xiaomi platforms(like F1X and so and)
 			70 30
 			80 25
 			90 20
-			95 10
-			99  5 >;
+			95 15
+			99 10 >;
 		bq,cold_thermal_seq = <
 			1      0  100 1700
 			2  (-300)   0 1000 >;
